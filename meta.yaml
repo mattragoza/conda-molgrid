@@ -1,0 +1,46 @@
+{% set version = "0.5.1" %}
+
+package:
+  name: molgrid
+  version: {{ version }}
+
+source:
+  git_url: https://github.com/gnina/libmolgrid.git
+  git_rev: tags/v{{ version }}
+  git_depth: 1
+
+build:
+  number: 1
+
+requirements:
+  build:
+    - {{ compiler("cxx") }}
+    - cmake >=3.18
+    - cudatoolkit-dev
+    - python
+  host:
+    - python
+    - boost
+    - numpy
+    - pytest
+    - openbabel
+  run:
+    - python
+
+test:
+  imports:
+    - molgrid
+  requires:
+    - pytest
+  run:
+    - pytest
+
+about:
+  home: https://gnina.github.io/libmolgrid/
+  license: Apache 2.0, GNU 2
+  summary: Comprehensive library for fast, GPU accelerated molecular gridding for deep learning workflows
+
+extra:
+  recipe-maintainers:
+    - mattragoza
+
