@@ -1,2 +1,2 @@
-This repo contains a conda build recipe for [molgrid](https://githuc.com/gnina/libmolgrid).
+This repo contains a conda build recipe for [molgrid](https://github.com/gnina/libmolgrid).
 
