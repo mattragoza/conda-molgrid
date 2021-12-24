@@ -1,3 +1,5 @@
+# conda-molgrid
+
 This repo contains a conda build recipe for [molgrid](https://github.com/gnina/libmolgrid).
 
 NOTE the build recipe does not work yet!
