@@ -4,12 +4,12 @@ This repo contains a conda build recipe for [molgrid](https://github.com/gnina/l
 
 NOTE the build recipe does not work yet!
 
-However, you can use the `environment.yaml` file to create a conda environment in which you can build molgrid from source:
+However, you can use `environment.yaml` to create a conda environment in which you can build molgrid from source:
 
 ```
 git clone git@github.com:gnina/libmolgrid.git
 git clone git@github.com:mattragoza/conda-molgrid.git
-conda create --file=conda-molgrid/environment.yaml
+conda env create --file=conda-molgrid/environment.yaml
 conda activate molgrid
 cd libmolgrid
 mkdir build
