@@ -14,18 +14,26 @@ build:
 
 requirements:
   build:
-    - {{ compiler("cxx") }}
-    - cmake >=3.18
-    - cudatoolkit-dev
-    - python
+    - gxx<10
+    - cmake>=3.18
+    - cudatoolkit-dev=11.3
   host:
-    - python
-    - boost
+    - python<3.10
+    - boost>=1.77
     - numpy
+    - scipy
+    - openbabel=3
+    - pytorch
     - pytest
-    - openbabel
   run:
-    - python
+    - cudatoolkit=11.3
+    - python<3.10
+    - boost>=1.77
+    - numpy
+    - scipy
+    - openbabel=3
+    - pytorch
+    - pytest
 
 test:
   imports:
@@ -43,4 +51,5 @@ about:
 extra:
   recipe-maintainers:
     - mattragoza
+
 
