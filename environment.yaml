@@ -2,16 +2,17 @@ name: molgrid
 channels:
   - pytorch
   - conda-forge
-  - defaults
 dependencies:
-  - gxx<10
+  - gxx=10
+  - zlib
   - cmake>=3.18
   - cudatoolkit-dev=11.3
-  - python<3.10
-  - boost>=1.77
+  - python
+  - boost
   - numpy
   - scipy
   - openbabel=3
-  - pytorch
+  - pytorch::pytorch
   - pytest
+  - psutil
 
