@@ -6,7 +6,6 @@ channels:
 dependencies:
   - gxx<10
   - cmake>=3.18
-  - cudatoolkit=11.3
   - cudatoolkit-dev=11.3
   - python<3.10
   - boost>=1.77
